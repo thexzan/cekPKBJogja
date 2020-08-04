@@ -26,7 +26,6 @@ exports.handler = function (event, context, callback) {
     });
 
     let result;
-    console.log(data.data);
     if (data.data.length > 100) {
       data = JSON.parse(data.data.replace(/'/g, `"`));
       result = { status: "success", data: data.result[0] };
