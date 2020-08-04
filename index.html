@@ -1,107 +1,201 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    />
     <title>Cek Pajak Motor &amp; Mobil Yogyakarta</title>
-    <meta name="theme-color" content="#508689">
-    <meta property="og:image" content="assets/img/thumb.png">
-    <meta name="twitter:description" content="Cek pajak kendaraan bermotor daerah yogyakarta">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="description" content="Cek PKB Pajak kendaraan bermotor daerah jogja">
-    <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Cek Pajak Motor &amp; Mobil Jogja">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-</head>
+    <meta name="theme-color" content="#508689" />
+    <meta property="og:image" content="assets/img/thumb.png" />
+    <meta
+      name="twitter:description"
+      content="Cek pajak kendaraan bermotor daerah yogyakarta"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="description"
+      content="Cek PKB Pajak kendaraan bermotor daerah jogja"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="Cek Pajak Motor &amp; Mobil Jogja" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+  </head>
 
-<body class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" style="font-family: Montserrat, sans-serif;background-color: #508689;/*max-width: 500px;*/">
-    <div class="d-md-flex d-xl-flex" style="margin-top: 20px;max-width: 500px;box-shadow: 0px 0px;">
-        <div class="container">
-            <div class="row bounce animated">
-                <div class="col-md-12">
-                    <h1 class="text-left" style="font-family: Montserrat, sans-serif;color: rgb(241,241,241);font-weight: 300;">Cek PKB Jogja</h1>
-                    <h2 class="text-left" style="color: rgb(203,203,203);font-size: 22px;margin-bottom: 20px;margin-top: -5px;font-weight: 300;">Pajak Kendaraan Bermotor</h2>
-                </div>
-            </div>
-            <div class="row bounce animated">
-                <div class="col">
-                    <form>
-                        <div class="input-group">
-                            <div class="input-group-prepend"><span class="input-group-text" style="background-color: #5f27cd;color: rgb(255,255,255);">AB</span></div><input class="form-control" type="text" autofocus="" autocomplete="off" placeholder="Masukan NOPOL">
-                            <div class="input-group-append"><button class="btn btn-primary" id="btncek" type="button" style="background-color: #5f27cd;">Cek PKB</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row" id="howtopanel" style="text-align: left;margin-top: 30px;margin-bottom: 30px;">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body" style="color: rgba(33,37,41,0.77);">
-                            <h1 style="font-size: 24px;">Selamat Datang!</h1>
-                            <p class="card-text" style="opacity: 0.75;font-size: 14px;font-weight: 300;">Untuk melihat data pajak kendaraan bermotor, silakan masukan nomor plat / nomor polisi lalu klik tombol&nbsp;<strong>Cek PKB.</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="resultpanel" style="text-align: left;margin-top: 30px;margin-bottom: 30px;">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="mb-0" style="font-weight: 300;">Hasil Cek - Pajak Kendaraan Bermotor Jogja</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Merk</th>
-                                            <th id="merk"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td id="type"><br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tahun</td>
-                                            <td id="tahun"><br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>PKB</td>
-                                            <td id="pkb"><br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>SWDKLLJ</td>
-                                            <td id="swdkllj"><br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total Pajak</td>
-                                            <td id="total"><br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jatuh Tempo</td>
-                                            <td id="jatuhtempo"><br></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="card-text" style="opacity: 0.50;font-size: 14px;font-weight: 300;"><strong>Keterangan :</strong><br>*SWDKLLJ = Sumbangan wajib dana kecelakaan lalu lintas jalan</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <body
+    class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"
+    style="
+      font-family: Montserrat, sans-serif;
+      background-color: #508689; /*max-width: 500px;*/
+    "
+  >
+    <div
+      class="d-md-flex d-xl-flex"
+      style="margin-top: 20px; max-width: 500px; box-shadow: 0px 0px;"
+    >
+      <div class="container">
+        <div class="row bounce animated">
+          <div class="col-md-12">
+            <h1
+              class="text-left"
+              style="
+                font-family: Montserrat, sans-serif;
+                color: rgb(241, 241, 241);
+                font-weight: 300;
+              "
+            >
+              Cek PKB Jogja
+            </h1>
+            <h2
+              class="text-left"
+              style="
+                color: rgb(203, 203, 203);
+                font-size: 22px;
+                margin-bottom: 20px;
+                margin-top: -5px;
+                font-weight: 300;
+              "
+            >
+              Pajak Kendaraan Bermotor
+            </h2>
+          </div>
         </div>
+        <div class="row bounce animated">
+          <div class="col">
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text"
+                    style="
+                      background-color: #5f27cd;
+                      color: rgb(255, 255, 255);
+                    "
+                    >AB</span
+                  >
+                </div>
+                <input
+                  class="form-control"
+                  type="text"
+                  autofocus=""
+                  autocomplete="off"
+                  placeholder="Masukan NOPOL"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-primary"
+                    id="btncek"
+                    type="button"
+                    style="background-color: #5f27cd;"
+                  >
+                    Cek PKB
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="row"
+          id="howtopanel"
+          style="text-align: left; margin-top: 30px; margin-bottom: 30px;"
+        >
+          <div class="col">
+            <div class="card">
+              <div class="card-body" style="color: rgba(33, 37, 41, 0.77);">
+                <h1 style="font-size: 24px;">Selamat Datang!</h1>
+                <p
+                  class="card-text"
+                  style="opacity: 0.75; font-size: 14px; font-weight: 300;"
+                >
+                  Untuk melihat data pajak kendaraan bermotor, silakan masukan
+                  nomor plat / nomor polisi lalu klik tombol&nbsp;<strong
+                    >Cek PKB.</strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          id="resultpanel"
+          style="text-align: left; margin-top: 30px; margin-bottom: 30px;"
+        >
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0" style="font-weight: 300;">
+                  Hasil Cek - Pajak Kendaraan Bermotor Jogja
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Merk</th>
+                        <th id="merk"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Type</td>
+                        <td id="type"><br /></td>
+                      </tr>
+                      <tr>
+                        <td>Tahun</td>
+                        <td id="tahun"><br /></td>
+                      </tr>
+                      <tr>
+                        <td>PKB</td>
+                        <td id="pkb"><br /></td>
+                      </tr>
+                      <tr>
+                        <td>SWDKLLJ</td>
+                        <td id="swdkllj"><br /></td>
+                      </tr>
+                      <tr>
+                        <td>Total Pajak</td>
+                        <td id="total"><br /></td>
+                      </tr>
+                      <tr>
+                        <td>Jatuh Tempo</td>
+                        <td id="jatuhtempo"><br /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p
+                  class="card-text"
+                  style="opacity: 0.5; font-size: 14px; font-weight: 300;"
+                >
+                  <strong>Keterangan :</strong><br />*SWDKLLJ = Sumbangan wajib
+                  dana kecelakaan lalu lintas jalan
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="assets/js/script.min.js"></script>
-</body>
-
+  </body>
 </html>
