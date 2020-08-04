@@ -1,0 +1,24 @@
+{
+  "name": "cekpkb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://thexzan@github.com/thexzan/cekPKBJogja.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thexzan/cekPKBJogja/issues"
+  },
+  "homepage": "https://github.com/thexzan/cekPKBJogja#readme",
+  "dependencies": {
+    "netlify-lambda": "^2.0.1"
+  }
+}
